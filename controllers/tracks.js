@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:trackId', async (req, res) => {
     try {
-      const foundTrack = await Track.findById(req.params.petId);
+      const foundTrack = await Track.findById(req.params.trackId);
       if (!foundTrack) {
         res.status(404);
         throw new Error('tunes not found dude.');
